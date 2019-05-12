@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4b4e392-b75c-48f6-95ed-f7b028dde5bb" name="Default" comment="" />
+    <list default="true" id="e4b4e392-b75c-48f6-95ed-f7b028dde5bb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/crawler/crawler/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/crawler/settings.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,11 +40,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dockerfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dockerfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crawler/crawler/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -71,12 +82,12 @@
       <list>
         <option value="$PROJECT_DIR$/crawler/crawler/app.py" />
         <option value="$PROJECT_DIR$/crawler/static/templates/index.html" />
-        <option value="$PROJECT_DIR$/crawler/crawler/settings.py" />
         <option value="$PROJECT_DIR$/crawler/crawler/crawler.oy.py" />
         <option value="$PROJECT_DIR$/crawler/crawler/urls.py" />
         <option value="$PROJECT_DIR$/crawler/crawler/crawler.py" />
         <option value="$PROJECT_DIR$/crawler/crawler/views.py" />
         <option value="$PROJECT_DIR$/dockerfile" />
+        <option value="$PROJECT_DIR$/crawler/crawler/settings.py" />
       </list>
     </option>
   </component>
@@ -97,6 +108,17 @@
             <path>
               <item name="gale_poc" type="b2602c69:ProjectViewProjectNode" />
               <item name="gale_poc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gale_poc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gale_poc" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gale_poc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gale_poc" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -153,7 +175,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1366" y="-4" width="1366" height="772" extended-state="6" />
+    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.787307" visible="true" weight="0.24944155" />
@@ -243,13 +265,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/crawler/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="87" column="46" selection-start-line="87" selection-start-column="46" selection-end-line="87" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/env/lib/python3.5/site-packages/rest_framework/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -322,6 +337,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/crawler/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
         </state>
       </provider>
     </entry>
