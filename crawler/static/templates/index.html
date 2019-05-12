@@ -1,0 +1,124 @@
+{% verbatim %}
+<!DOCTYPE html>
+<html ng-app="webCrawler">
+
+	<head>
+
+
+		<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/spacings.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+
+		<title>Web Crawler</title>
+	</head>
+
+	<body>
+
+		
+		<section class="container" ng-controller="mainController as ctrl">
+			
+			<div class="row">
+				<h1>Web Crawler</h1>
+			</div>
+
+			<form name="urlform" novalidate>
+				<div class="row">
+					
+					<div class="col-sm-6 p-l-0">
+						
+						<input type="url" name="url" placeholder="enter url" class="form-control" ng-model="ctrl.url" required>
+
+						<span class="error" ng-if="urlform.url.$dirty && urlform.url.$invalid">enter valid url</span>
+
+					</div>
+
+					<div class="col-sm-6 p-r-0">
+						
+						<input type="number" name="level" placeholder="enter crawl level" class="form-control" ng-model="ctrl.level" ng-min="1" min="1" required>
+
+						<span class="error" ng-if="urlform.level.$dirty && urlform.level.$invalid">min value is 1</span>
+
+
+					</div>
+
+				</div>
+
+
+				<div class="row m-t-10">
+					
+					<button 
+						class="btn btn-success btn-md" 
+						ng-click="ctrl.getLinks(ctrl.url, ctrl.level)"
+						ng-disabled="urlform.$invalid">Get Links</button>
+
+				</div>
+			</form>
+
+			<div class="row text-center m-t-10" ng-if="ctrl.fetching">
+				<div class="loader"></div>
+				<div class="m-t-10" ng-bind="ctrl.loadertext"></div>
+			</div>
+
+
+			<div class="row m-t-10"  ng-if="ctrl.data && !ctrl.fetching">
+				
+				<section class="panel panel-default p-all-10">
+					
+					<ul class="list-unstyled">
+							
+						<li class="m-t-20" ng-repeat="object in ctrl.data.links track by $index">
+
+							<a href="{{object.url}}" ng-bind="object.url" class="m-t-5 m-b-5"></a>
+
+							<div ng-include="'link-item.html'" ng-if="object.links.length"></div>
+
+
+						</li>	
+
+
+					</ul>
+
+				</section>
+
+
+			</div>
+
+			<div class="row text-center m-t-20" ng-if="ctrl.error">
+				<p class="error">{{ctrl.error}}</p>
+			</div>
+
+
+		</section>
+
+
+		<!--angular tempaltes-->
+		<script type="text/ng-template" id="link-item.html">
+			
+
+			<ul class="list-unstyled m-l-20 p-l-20">
+
+				<li class="m-t-20" ng-repeat="link in object.links">
+
+					<a href="{{link.url}}" ng-bind="link.url" class="m-t-5 m-b-5"></a>
+
+					<div ng-include="'link-item.html'" ng-if="link.links.length"></div>
+
+				</li>
+
+			</ul>
+
+
+		</script>
+
+
+
+		<!--add all scripts below-->
+
+		<script src="/static/js/angular.js"></script>
+		<script src="/static/app/app.controller.js"></script>
+		<script src="/static/app/app.service.js"></script>
+		<script src="/static/app/app.js"></script>
+
+	</body>
+</html>
+{% endverbatim %}
